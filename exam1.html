@@ -62,7 +62,7 @@
         font-size: 30px;
     }
     .p1{
-        margin: -30px 60px 10px 0;
+        margin: 10px 60px 10px 0;
         color: rgb(169, 166, 166);
     }
     input{
@@ -109,6 +109,7 @@
         text-decoration:underline;
         color: rgb(93, 92, 92);
     }
+    
     .check{
         display: flex;
         flex-direction: row;
@@ -133,13 +134,12 @@
                     <input type="email" id="emailInput" placeholder="Email or phone number" required> <br>
                     <input type="password" id="passInput" placeholder="Password" required>
                 </form>
-                    <button class="started1">Sign In</button>
+                <button class="started1" onclick="signin()">Sign In</button>
                 <p class="p1">OR</p>
-                <div>
-                    <button class="started2">Use a Sign-In Code</button>
-                </div>
+                <button class="started2" onclick="usecode()">Use a Sign-In Code</button>
             </div>
             <a href="" class="a1">Forgot password?</a>
+            
             <div class="check">
                 <input type="checkbox"><h3 class="remember">Remember me</h3>
             </div>
@@ -171,7 +171,11 @@
             }
         }
         document.getElementById('passInput').addEventListener('keypress', getPasswordValue);
-        
+
+        function usecode() {
+document.getElementById("div1").style.display="none";
+document.getElementById("div2").style.display="block";
+}
     </script>
 </body>
 </html>
